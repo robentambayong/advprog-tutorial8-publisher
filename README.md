@@ -8,3 +8,12 @@ It means both the publisher and the subscriber are connecting to the exact same 
 
 ### RabbitMQ Dashboard
 ![RabbitMQ Dashboard](rabbitmq.png)
+
+### Running the Publisher and Subscriber
+
+**Terminal Outputs:**
+![Subscriber Terminal](subscriber_terminal.png)
+![Publisher Terminal](publisher_terminal.png)
+
+**What is happening:**
+When the publisher program is executed, it establishes a connection to the RabbitMQ broker and fires off five distinct `UserCreatedEventMessage` events to the `user_created` queue. Because the subscriber program is already running and actively listening to that exact same queue, the message broker instantly routes and pushes those newly arrived events to the subscriber. The subscriber then processes each message and logs the data to the console in real-time, demonstrating a seamless event-driven architecture.
