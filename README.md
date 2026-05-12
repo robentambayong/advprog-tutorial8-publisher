@@ -5,3 +5,6 @@ In one run, the publisher will send exactly 5 events (messages) sequentially to 
 
 **b. The URL is the same as the subscriber program, what does it mean?**
 It means both the publisher and the subscriber are connecting to the exact same AMQP message broker instance running locally on port 5672 using the same credentials. This shared connection point allows the publisher to push messages to a queue that the subscriber is concurrently listening to.
+
+### RabbitMQ Dashboard
+![RabbitMQ Dashboard](rabbitmq.png)
